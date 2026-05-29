@@ -1,10 +1,14 @@
 package main.java.com.local.negocio.core;
 
 public class Producto implements Vendible {
+    private Integer id;
+    private String nombre;
     private double precio;
     private Integer stock;
 
-    public Producto(double precio, Integer stock) {
+    public Producto(Integer id, String nombre, double precio, Integer stock) {
+        this.id = id;
+        this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
     }
