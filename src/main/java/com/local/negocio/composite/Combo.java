@@ -12,6 +12,14 @@ public class Combo {
         this.nombreCombo = nombreCombo;
         this.contenidoCombo = vendibles;
     }
+
+    public Integer getIdCombo() {
+        return idCombo;
+    }
+    public String getNombreCombo() {
+        return nombreCombo;
+    }
+
     public void agregarVendible(Vendible vendible) {
         contenidoCombo.add(vendible);
     }

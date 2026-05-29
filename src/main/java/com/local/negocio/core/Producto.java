@@ -12,6 +12,12 @@ public class Producto implements Vendible {
         this.precio = precio;
         this.stock = stock;
     }
+    public Integer getId() {
+        return id;
+    }
+    public String getNombre() {
+        return nombre;
+    }
 
     public double getPrecio() {
         return precio;
