@@ -1,9 +1,9 @@
-package main.java.com.local.negocio.ventas;
+package main.java.com.local.negocio.Pruebas;
 import main.java.com.local.negocio.core.Vendible;
 import main.java.com.local.negocio.composite.Combo;
 import main.java.com.local.negocio.core.Producto;
 
-public class ClienteComercial {
+public class ClienteComercial1 {
     public static void main(String[] args) {
         // --- 1. CREACIÓN DE PRODUCTOS SIMPLES (Hojas) ---
         Vendible casco = new Producto(1, "Casco Profesional", 150.0, 10);
