@@ -1,16 +1,17 @@
 package main.java.com.local.negocio.composite;
 import main.java.com.local.negocio.core.Vendible;
 import java.util.List;
+import java.util.ArrayList;
 
-public class Combo {
+public class Combo implements Vendible {
     private Integer idCombo;
     private String nombreCombo;
-    private java.util.List<Vendible> contenidoCombo;
+    private List<Vendible> contenidoCombo;
 
-    public Combo(Integer idCombo, String nombreCombo, List<Vendible> vendibles) {
+    public Combo(Integer idCombo, String nombreCombo) {
         this.idCombo = idCombo;
         this.nombreCombo = nombreCombo;
-        this.contenidoCombo = vendibles;
+        this.contenidoCombo = new ArrayList<>();
     }
 
     public Integer getIdCombo() {
@@ -37,6 +38,11 @@ public class Combo {
     }
 
     public Integer getStock() {
+        if (contenidoCombo.isEmpty()){
+            return 0;
+        }
+
+
         Integer stockMinimo = Integer.MAX_VALUE;
         for (Vendible vendible : contenidoCombo) {
             Integer stockVendible = vendible.getStock();
